@@ -47,7 +47,7 @@ resource "apstra_datacenter_device_allocation" "lab_guide" {
   blueprint_id     = apstra_datacenter_blueprint.lab_guide.id
   interface_map_id = data.apstra_interface_map.lab_guide.id
 #  node_name        = lower(trimprefix(each.key, "_"))
-  node_name        = lower(each.key, "_")
+  node_name        = lower(each.key)
 }
 
 # Deploy the blueprint.
